@@ -31,9 +31,26 @@ Student.prototype.constructor = Student;
 
 
 Student.prototype.study = function() {
-	this.study = true,
-	stopStudy = false
-}
+	if (this.studying === false) {
+		this.sleeping = true;
+	} else {
+		console.log(this.studying + "lemme alone");
+		}
+	};
+
+Student.prototype.stopStudy = function() {
+	if (this.studying === true) {
+		this.sleeping = false;
+	} else {
+		console.log(this.studying + "freakin done");
+	}
+};
+
+Student.prototype.sleep = function() {
+	if(this.studying === false) {
+		this.sleep = true;
+	}
+};
 
 
 // where to set up inhereitence; where to place constructor; important to diagram; 
